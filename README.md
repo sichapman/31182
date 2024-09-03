@@ -1,12 +1,16 @@
 # 31182
 
+You need to apply inherited-config.json as inherited config when executing Renovate.
+
 ## Current behavior
 
-Only the commons-lang update goes into the minor versions group PR (branch renovate/all-packages) - the Flyway dependencies get put in their own (branch renovate/flyway). It seems that the packageRule coming in from the extends is being applied after the packagesRules in the inherited config, instead of before.
+Two PRs get created - 1) the commons-lang update in the minor versions group PR (branch renovate/all-packages) and 2) the Flyway dependencies in their own (branch renovate/flyway).
 
 ## Expected behavior
 
 The minor version grouping to override the extended flyway version grouping, and one branch+PR to be created for all 3 dependencies.
+
+This expected behavior does happen if the config is placed in the repository renovate.json config instead of the inherited config.
 
 ## Link to the Renovate issue or Discussion
 
