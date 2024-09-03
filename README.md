@@ -8,7 +8,7 @@ Two PRs get created - 1) the commons-lang update in the minor versions group PR 
 
 ## Expected behavior
 
-The minor version grouping to override the extended flyway version grouping, and one branch+PR to be created for all 3 dependencies.
+One PR containing all 3 dependencies.
 
 This expected behavior does happen if the config is placed in the repository renovate.json config instead of the inherited config.
 
