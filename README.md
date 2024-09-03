@@ -1,17 +1,13 @@
-# minimal-reproduction-template
-
-First, read the [Renovate minimal reproduction instructions](https://github.com/renovatebot/renovate/blob/main/docs/development/minimal-reproductions.md).
-
-Then replace the current `h1` with the Renovate Issue/Discussion number.
+# 31182
 
 ## Current behavior
 
-Explain the current behavior here.
+Only the commons-lang update goes into the minor versions group PR (branch renovate/all-packages) - the Flyway dependencies get put in their own (branch renovate/flyway). It seems that the packageRule coming in from the extends is being applied after the packagesRules in the inherited config, instead of before.
 
 ## Expected behavior
 
-Explain the expected behavior here.
+The minor version grouping to override the extended flyway version grouping, and one branch+PR to be created for all 3 dependencies.
 
 ## Link to the Renovate issue or Discussion
 
-Put your link to the Renovate issue or Discussion here.
+[Renovate discussion 31182](https://github.com/renovatebot/renovate/discussions/31182)
